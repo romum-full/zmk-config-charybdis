@@ -78,7 +78,6 @@
                                            &kp LEFT_ALT  &kp BACKSPACE    &kp DEL
             >;
 
-            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
