@@ -136,7 +136,7 @@
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F     &trans  &trans  &trans  &trans  &trans  &trans
 &trans            &trans          &trans  &trans  &kp B   &kp M     &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans  &trans  &trans    &trans  &trans
-                                                  &trans  &to 0     &trans
+                                                  &trans  &to 6     &trans
             >;
         };
     };
