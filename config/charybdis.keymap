@@ -92,12 +92,12 @@
 
         layer_2 {
             bindings = <
-&none         &kp F1  &kp F2     &kp F3     &kp F4             &kp F5    &kp F6        &kp F7              &kp F8              &kp F9               &kp F10  &kp PRINTSCREEN
-&kp C_VOL_UP  &none   &none      &kp UP     &none              &none     &none         &none               &kp LG(UP_ARROW)    &kp F11              &kp F12  &none
-&kp C_VOL_DN  &none   &kp LEFT   &kp DOWN   &kp RIGHT          &none     &none         &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &none    &none
-&kp K_MUTE    &none   &kp LC(W)  &kp LC(T)  &kp LS(LG(RIGHT))  &none     &none         &kp LA(F4)          &none               &none                &none    &none
-                                 &trans     &trans             &none     &kp LEFT_ALT  &kp RALT
-                                            &trans             &trans    &none
+&none         &kp F1  &kp F2         &kp F3     &kp F4     &kp F5    &kp F6  &kp F7              &kp F8              &kp F9               &kp F10  &none
+&kp C_VOL_UP  &none   &none          &kp UP     &none      &none     &none   &none               &kp LG(UP_ARROW)    &kp F11              &kp F12  &none
+&kp C_VOL_DN  &none   &kp LEFT       &kp DOWN   &kp RIGHT  &none     &none   &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &none    &none
+&kp K_MUTE    &none   &kp LC(LS(T))  &kp LC(W)  &kp LC(T)  &none     &none   &mkp MB5            &mkp MB4            &none                &none    &kp LA(F4)
+                                     &trans     &trans     &none     &none   &none
+                                                &trans     &trans    &none
             >;
         };
 
@@ -106,8 +106,8 @@
 &none  &none  &none      &none      &none      &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none      &none      &none      &none    &none  &none  &none  &none  &none  &none
 &none  &none  &mkp RCLK  &mkp MCLK  &mkp LCLK  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none      &none      &none      &none    &none  &mo 4  &none  &none  &none  &none
-                         &mkp MB4   &mkp MB5   &none    &none  &none
+&none  &none  &none      &none      &none      &none    &none  &none  &none  &none  &none  &none
+                         &mo 4      &none      &none    &none  &none
                                     &none      &none    &none
             >;
         };
@@ -136,10 +136,10 @@
 
         game {
             bindings = <
-&kp ESC           &trans          &kp N1  &kp N2    &kp N3        &kp N4       &trans         &trans      &trans  &trans  &trans  &trans
-&trans            &kp TAB         &kp Q   &kp W     &kp E         &kp R        &trans         &trans      &trans  &trans  &trans  &trans
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F        &trans         &trans      &trans  &trans  &trans  &trans
-&kp J             &trans          &trans  &trans    &kp B         &kp M        &kp LA(LC(S))  &kp LA(F4)  &trans  &trans  &trans  &trans
+&kp ESC           &trans          &kp N1  &kp N2    &kp N3        &kp N4       &trans         &trans  &trans  &trans  &trans  &none
+&trans            &kp TAB         &kp Q   &kp W     &kp E         &kp R        &trans         &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F        &trans         &trans  &trans  &trans  &trans  &trans
+&kp J             &trans          &trans  &trans    &kp B         &kp M        &kp LA(LC(S))  &none   &trans  &trans  &trans  &kp LA(F4)
                                           &kt LEFT  &kp SPACE     &kp RIGHT    &trans         &trans
                                                     &kp LEFT_ALT  &tog 6       &trans
             >;
