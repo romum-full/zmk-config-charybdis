@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <240>;
@@ -135,12 +136,12 @@
 
         game {
             bindings = <
-&kp ESC           &trans          &kp N1  &kp N2    &kp N3        &kp N4    &trans         &trans  &trans  &trans  &trans  &none
-&kp L             &kp TAB         &kp Q   &kp W     &kp E         &kp R     &trans         &trans  &trans  &trans  &trans  &trans
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F     &trans         &trans  &trans  &trans  &trans  &trans
-&kp J             &trans          &trans  &trans    &kp B         &kp M     &kp LA(LC(S))  &none   &trans  &trans  &trans  &kp LA(F4)
-                                          &kt LEFT  &kp SPACE     &kp T     &trans         &trans
-                                                    &kp LEFT_ALT  &tog 6    &trans
+&kp ESC           &trans           &kp N1  &kp N2  &kp N3        &kp N4    &trans         &trans  &trans  &trans  &trans  &none
+&none             &kp TAB          &kp Q   &kp W   &kp E         &kp R     &trans         &trans  &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &kp LEFT_SHIFT   &kp A   &kp S   &kp D         &kp F     &trans         &kp J   &trans  &kp L   &trans  &trans
+&kp LEFT_ARROW    &kp RIGHT_ARROW  &none   &kp C   &none         &kp B     &kp LA(LC(S))  &kp M   &trans  &trans  &trans  &kp LA(F4)
+                                           &kt T   &kp SPACE     &none     &trans         &trans
+                                                   &kp LEFT_ALT  &tog 6    &trans
             >;
         };
     };
