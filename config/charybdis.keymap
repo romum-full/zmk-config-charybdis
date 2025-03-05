@@ -49,16 +49,6 @@
         };
     };
 
-    macros {
-        quicker: quicker {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL &kp LCTRL>, <&macro_press>;
-
-            label = "QUICKER";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -69,24 +59,24 @@
 &none      &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G     &kp H          &mt RIGHT_SHIFT J  &mt LEFT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOS
 &none      &kp Z           &kp X           &kp C               &kp V             &kp B     &kp N          &kp M              &lt 3 COMMA         &lt 4 PERIOD     &lt 5 SLASH         &kp DELETE
                                            &none               &kp ENTER         &none     &kp BACKSPACE  &kp SPACE
-                                                               &mo 4             &tog 1    &none
+                                                               &none             &tog 1    &none
             >;
         };
 
         game {
             bindings = <
-&kp ESC           &trans          &kp N1  &kp N2  &kp N3        &kp N4    &trans         &trans  &trans  &trans  &trans  &none
-&none             &kp TAB         &kp Q   &kp W   &kp E         &kp R     &trans         &trans  &trans  &trans  &trans  &trans
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F     &trans         &kp J   &trans  &kp L   &trans  &trans
-&none             &kp Z           &kp X   &kp C   &kp V         &kp B     &kp LA(LC(S))  &kp M   &trans  &trans  &trans  &kp LA(F4)
-                                          &kt T   &kp SPACE     &none     &trans         &trans
-                                                  &kp LEFT_ALT  &tog 1    &trans
+&kp ESC           &trans          &kp N1  &kp N2  &kp N3        &kp N4    &kp LC(LA(S))  &trans     &trans  &trans  &trans  &none
+&none             &kp TAB         &kp Q   &kp W   &kp E         &kp R     &trans         &trans     &trans  &trans  &trans  &trans
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F     &trans         &kp J      &trans  &kp L   &trans  &trans
+&none             &kp Z           &kp X   &kp C   &kp V         &kp B     &none          &kp M      &trans  &trans  &trans  &kp LA(F4)
+                                          &kt T   &kp SPACE     &none     &kp LEFT       &kp RIGHT
+                                                  &kp LEFT_ALT  &tog 1    &kp RIGHT
             >;
         };
 
         layer_1 {
             bindings = <
-&none         &kp F1  &kp F2         &kp F3     &kp F4     &kp F5               &kp F6  &kp F7              &kp F8              &kp F9               &kp F10  &none
+&none         &kp F1  &kp F2         &kp F3     &kp F4     &kp F5               &kp F6  &kp F7              &kp F8              &kp F9               &kp F10  &kp PRINTSCREEN
 &kp C_VOL_UP  &none   &none          &kp UP     &none      &none                &none   &none               &kp LG(UP_ARROW)    &kp F11              &kp F12  &none
 &kp C_VOL_DN  &none   &kp LEFT       &kp DOWN   &kp RIGHT  &none                &none   &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &none    &none
 &kp K_MUTE    &none   &kp LC(LS(T))  &kp LC(W)  &kp LC(T)  &kp LG(LS(RIGHT))    &none   &mkp MB5            &mkp MB4            &none                &none    &kp LA(F4)
@@ -101,7 +91,7 @@
 &none  &none  &none      &none      &none      &none    &none  &none  &none  &none  &none  &none
 &none  &none  &mkp RCLK  &mkp MCLK  &mkp LCLK  &none    &none  &none  &none  &none  &none  &none
 &none  &none  &none      &none      &none      &none    &none  &none  &none  &none  &none  &none
-                         &mo 4      &none      &none    &none  &none
+                         &none      &none      &none    &none  &none
                                     &none      &none    &none
             >;
         };
